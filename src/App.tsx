@@ -33,14 +33,26 @@ function App() {
     setLoading(false);
   };
 
-  useEffect(() => {
-    fetchAllCountries();
-  }, []);
+  function sortCountryOrder(order: string) {
+    if (order === "desc") {
+      allCountriesData.sort(function (a, b) {
+        return a.name.official.localeCompare(b.name.official);
+      });
+    } else if (order === "asc") {
+      allCountriesData.sort(function (a, b) {
+        return b.name.official.localeCompare(a.name.official);
+      });
+    }
+  }
 
   const sortOptions = [
     { value: "asc", label: "Asc" },
     { value: "desc", label: "Desc" },
   ];
+
+  useEffect(() => {
+    fetchAllCountries();
+  }, []);
 
   useEffect(() => {
     if (search) {
@@ -51,6 +63,13 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
+  useEffect(() => {
+    if (selectedSort) {
+      sortCountryOrder(selectedSort);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSort]);
+
   return (
     <div className={styles.wrapper}>
       <h1>Qoosi Test</h1>
@@ -60,6 +79,13 @@ function App() {
           className={styles.search}
           placeholder="Search"
           onChange={(e) => setSearch(e.target.value)}
+        />
+        <Select
+          options={sortOptions}
+          onSelect={(value) => setSelectedSort(value as string)}
+          value={selectedSort}
+          placeholder="Select Sort"
+          className={styles.select}
         />
       </div>
       {loading ? (
