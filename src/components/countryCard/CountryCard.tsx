@@ -5,7 +5,7 @@ interface CountryCardProps {
   country: Country;
 }
 
-export default function CountryCars(props: CountryCardProps) {
+export default function CountryCards(props: CountryCardProps) {
   const { country } = props;
   const { altSpellings, cca2, cca3, flag, idd, name } = country;
 
