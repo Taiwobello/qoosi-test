@@ -1,5 +1,4 @@
-const baseUrl = "";
-export const pushNotificationUrl = "https://fcm.googleapis.com/fcm/send";
+const baseUrl = "https://restcountries.com/v3.1";
 
 interface FetchInstanceType {
   get: (url: string, config?: RequestInit) => Promise<any>;
