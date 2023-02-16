@@ -50,3 +50,21 @@ export const allCountries: () => Promise<
     };
   }
 };
+
+export const countriesByName: (
+  name: string
+) => Promise<RequestResponse<Country[]>> = async (name) => {
+  try {
+    const response = await restAPIInstance.get(`/name/${name}`);
+
+    return {
+      error: false,
+      data: response.map((record: any) => adaptCountryRecord(record, true)),
+    };
+  } catch (error) {
+    return {
+      error: true,
+      data: null,
+    };
+  }
+};
