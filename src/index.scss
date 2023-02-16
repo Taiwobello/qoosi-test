@@ -16,4 +16,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fefae0;
+}
+
+input,
+input:active,
+textarea,
+textarea:active {
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
 }

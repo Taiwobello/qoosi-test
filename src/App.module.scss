@@ -1,0 +1,10 @@
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  .country-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
