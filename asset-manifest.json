@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/qoosi-test/static/css/main.12acf728.css",
+    "main.js": "/qoosi-test/static/js/main.94123739.js",
+    "static/js/787.1b63a005.chunk.js": "/qoosi-test/static/js/787.1b63a005.chunk.js",
+    "index.html": "/qoosi-test/index.html",
+    "main.12acf728.css.map": "/qoosi-test/static/css/main.12acf728.css.map",
+    "main.94123739.js.map": "/qoosi-test/static/js/main.94123739.js.map",
+    "787.1b63a005.chunk.js.map": "/qoosi-test/static/js/787.1b63a005.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12acf728.css",
+    "static/js/main.94123739.js"
+  ]
+}
