@@ -17,10 +17,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fefae0;
+  font-size: 1.6rem;
 }
 
 #root {
   background-color: #fefae0;
+  min-height: 100vh;
 }
 
 input,
