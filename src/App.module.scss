@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 900px) {
     width: 90%;
@@ -13,6 +14,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 511px) {
+      justify-content: center;
+    }
   }
 
   .search {
@@ -30,6 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .select {
     width: 30%;

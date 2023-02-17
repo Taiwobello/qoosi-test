@@ -69,6 +69,7 @@ function App() {
       fetchCountriesByname();
     } else {
       fetchAllCountries();
+      setSelectedSort("");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
@@ -88,7 +89,7 @@ function App() {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Qoosi Test</h1>
+      <h1>Countries Information</h1>
       <div className={styles["input-wrapper"]}>
         <input
           type="text"
