@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import CountryCars from "./components/countryCard/CountryCard";
 import { allCountries, countriesByName } from "./utils/helpers/data/country";
 import { Country } from "./utils/helpers/types/Country";
 import styles from "./App.module.scss";
 import Select from "./components/select/Select";
+import CountryCards from "./components/countryCard/CountryCard";
 
 function App() {
   const [allCountriesData, setAllCountriesData] = useState<Country[]>([]);
@@ -92,8 +92,8 @@ function App() {
         <img src="spinner.svg" alt="loading" className={styles.spinner} />
       ) : (
         <div className={styles["country-wrapper"]}>
-          {allCountriesData.map((country, index) => (
-            <CountryCars key={index} country={country} />
+          {allCountriesData.slice(0, 25).map((country, index) => (
+            <CountryCards key={index} country={country} />
           ))}
         </div>
       )}
